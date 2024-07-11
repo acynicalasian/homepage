@@ -16,6 +16,8 @@ export default function RootLayout({ children }) {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
       }
     }
+
+    
   }, []);
   return (
     <html lang="en">

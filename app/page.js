@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       {/* First Parallax Image with Logo Text */}
-      <div className="bgimg-1 w3-display-container opacity-mod" id="home">
+      <div className="bgimg-1 w3-display-container" id="home">
         <div className="w3-display-middle" style={{ whiteSpace: "nowrap" }}>
           <span className="w3-center my-padding-fixed w3-black w3-xlarge w3-wide w3-animate-opacity">
             ARTHUR KIM
@@ -54,16 +54,18 @@ export default function Home() {
             <p>
               My goal with this project is to demonstrate my willingness and ability
               to learn new skills. To power this website/webapp, I decided to learn
-              React and Next.js. These two frameworks have 
+              React and Next.js. These two frameworks have taught me a lot about 
+              approaching front-end design with a modular approach. I started off 
+              with a free template for the webpage, but I've learned a lot about 
+              HTML, CSS, and JavaScript from tweaking various elements of the 
+              template.
             </p>
             <p>
-              As of now, I'm in the process of setting up the website itself, but my
-              goal is to learn how to implement OAuth for Facebook (and eventually
-              other social media platforms). I'd like to use Facebook's SDK to
-              scrape user posts and pass them to a backend that's powered by IBM
-              Watson's Personality Insights service. Based on sentiment analysis, I
-              want to make a "genie" that'll provide whimsical suggestions based on
-              predictions made for mood, hobbies, etc.
+              As of now, I'm in the process of implementing Facebook Login via the
+              JavaScript SDK provided by Meta. I'd like to fetch a user's posts by
+              using Meta's SDK and use IBM Watson's sentiment analysis features to
+              make fun suggestions based on the user's recent posts; it'll be a 
+              "genie" of sorts.
             </p>
           </div>
         </div>

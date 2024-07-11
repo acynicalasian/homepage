@@ -1,16 +1,17 @@
 'use client'
 
-import { useEffect, React } from "react";
+import { React } from "react";
 
+// Note: Hard for me to test this behavior since I don't have a mobile platform to test on atm
+// Consider moving this to a separate file, making it the top-level export default function, and
+// using useEffect()
 function toggleNavBar() {
-  useEffect(() => {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }, []);
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 
 export default function NavBar() {
@@ -72,7 +73,7 @@ export default function NavBar() {
         <a
           href="#links"
           className="w3-bar-item w3-button"
-          onclick={toggleNavBar}
+          onClick={toggleNavBar}
         >
           LINKS
         </a>
