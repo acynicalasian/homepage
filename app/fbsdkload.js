@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useState } from "react";
+import Genie from "./genie.js";
+import FBLogin from "./fblogin.js";
 
 export default function FBSDKLoad() {
   const [status, setStatus] = useState("");
@@ -15,6 +17,10 @@ export default function FBSDKLoad() {
       setStatus(response.status);
     });
   },[]);
-  if (!status) return <p>uh oh</p>;
-  else return <p>{status}</p>;
+  if (status == "connected") {
+    return <Genie/>;
+  } else if (status == "not_authorized" || 
+             status == "unknown") {
+    return <FBLogin/>;
+  } else return <p>fuck</p>;
 }
