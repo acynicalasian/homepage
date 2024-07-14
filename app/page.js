@@ -1,8 +1,12 @@
-import Image from "next/image";
+import FBSDKLoad from "./fbsdkload";
 
 export default function Home() {
   return (
     <>
+      {/* I believe this should force the SDK to load synchronously instead of using the async option
+          given by Meta in their guides. */}
+      <script crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+      
       {/* First Parallax Image with Logo Text */}
       <div className="bgimg-1 w3-display-container" id="home">
         <div className="w3-display-middle" style={{ whiteSpace: "nowrap" }}>
@@ -54,17 +58,17 @@ export default function Home() {
             <p>
               My goal with this project is to demonstrate my willingness and ability
               to learn new skills. To power this website/webapp, I decided to learn
-              React and Next.js. These two frameworks have taught me a lot about 
-              approaching front-end design with a modular approach. I started off 
-              with a free template for the webpage, but I've learned a lot about 
-              HTML, CSS, and JavaScript from tweaking various elements of the 
+              React and Next.js. These two frameworks have taught me a lot about
+              approaching front-end design with a modular approach. I started off
+              with a free template for the webpage, but I've learned a lot about
+              HTML, CSS, and JavaScript from tweaking various elements of the
               template.
             </p>
             <p>
               As of now, I'm in the process of implementing Facebook Login via the
               JavaScript SDK provided by Meta. I'd like to fetch a user's posts by
               using Meta's SDK and use IBM Watson's sentiment analysis features to
-              make fun suggestions based on the user's recent posts; it'll be a 
+              make fun suggestions based on the user's recent posts; it'll be a
               "genie" of sorts.
             </p>
           </div>
@@ -81,7 +85,7 @@ export default function Home() {
         className="w3-content w3-container w3-padding-64 genie-area snap-child"
         id="genie"
       >
-        PLACEHOLDER!
+        <FBSDKLoad />
       </div>
       {/* Third Parallax Image with Genie? Text */}
       <div className="bgimg-3 w3-display-container opacity-mod">

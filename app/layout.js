@@ -3,6 +3,7 @@ import RawStyle from "./rawstyle.js";
 import NavBar from "./navbar.js";
 import Footer from "./footer.js";
 import { React, useEffect } from "react";
+import FBSDKLoad from "./fbsdkload.js";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -16,8 +17,6 @@ export default function RootLayout({ children }) {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
       }
     }
-
-    
   }, []);
   return (
     <html lang="en">
@@ -28,7 +27,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <base href="/" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=optional" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
