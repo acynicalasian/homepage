@@ -2,15 +2,23 @@
 
 import { React } from "react";
 
-// Note: Hard for me to test this behavior since I don't have a mobile platform to test on atm
-// Consider moving this to a separate file, making it the top-level export default function, and
-// using useEffect()
 function toggleNavBar() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
+    // Toggle navbar style to be white if we press the toggle button
+    if (document.body.scrollTop <= 100 || document.documentElement.scrollTop <= 100) {
+      var navbar = document.getElementById("myNavbar");
+      navbar.className = "w3-bar w3-card w3-white";
+    }
   } else {
     x.className = x.className.replace(" w3-show", "");
+    // Toggle navbar back to transparent if we press the toggle button while the
+    // navbar menu was open
+    if (document.body.scrollTop <= 100 || document.documentElement.scrollTop <= 100) {
+      var navbar = document.getElementById("myNavbar");
+      navbar.className = "w3-bar";
+    }
   }
 }
 
@@ -20,7 +28,6 @@ export default function NavBar() {
       <div className="w3-bar" id="myNavbar">
         <a
           className="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
-          href="javascript:void(0);"
           onClick={toggleNavBar}
           title="Toggle Navigation Menu"
         >
