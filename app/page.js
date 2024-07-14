@@ -1,4 +1,4 @@
-import FBSDKLoad from "./fbsdkload";
+import FBSDKLoad from "./fbsdkload.js";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       {/* I believe this should force the SDK to load synchronously instead of using the async option
           given by Meta in their guides. */}
       <script crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-      
+
       {/* First Parallax Image with Logo Text */}
       <div className="bgimg-1 w3-display-container" id="home">
         <div className="w3-display-middle" style={{ whiteSpace: "nowrap" }}>
@@ -30,8 +30,8 @@ export default function Home() {
           experience consists primarily of backend development with a particular
           focus on NLP, and I'm looking to work as an entry level software
           engineer/developer. I feel most comfortable programming in Python, C, and
-          Haskell, but I have experience in C++ and shell scripting. This website
-          and webapp serves not only as a portal to my Github and my LinkedIn but
+          Haskell, but I have academic experience in C++ and shell scripting. This
+          website/webapp serves not only as a portal to my Github and my LinkedIn but
           also as a live project in and of itself.
         </p>
         <div className="w3-row">
@@ -48,7 +48,7 @@ export default function Home() {
             <img
               src="/img/small_1.png"
               className="w3-round w3-image"
-              alt="Insert meme here"
+              alt="A picture of me doing beginner kendo"
               width={500}
               height={333}
             />
@@ -87,7 +87,7 @@ export default function Home() {
       >
         <FBSDKLoad />
       </div>
-      {/* Third Parallax Image with Genie? Text */}
+      {/* Third Parallax Image with Links Text */}
       <div className="bgimg-3 w3-display-container opacity-mod">
         <div className="w3-display-middle">
           <span className="w3-xxlarge w3-text-white w3-wide">LINKS</span>

@@ -1,9 +1,9 @@
 'use client'
-import RawStyle from "./rawstyle.js";
+
+import "./globals.css";
 import NavBar from "./navbar.js";
 import Footer from "./footer.js";
 import { React, useEffect } from "react";
-import FBSDKLoad from "./fbsdkload.js";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -27,17 +27,19 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <base href="/" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=optional" />
+
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <link rel="icon" type="image/png" href="favicon.png" />
-        <RawStyle />
         <title>Arthur Kim</title>
       </head>
 
       <body>
+        {/* I believe this should force the SDK to load synchronously instead of using the async option
+          given by Meta in their guides. */}
+        <script crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
         <NavBar />
         {children}
         <Footer />
