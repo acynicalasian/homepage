@@ -1,12 +1,9 @@
+'use client'
 import FBSDKLoad from "./fbsdkload.js";
 
 export default function Home() {
   return (
     <>
-      {/* I believe this should force the SDK to load synchronously instead of using the async option
-          given by Meta in their guides. */}
-      <script crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
       {/* First Parallax Image with Logo Text */}
       <div className="bgimg-1 w3-display-container" id="home">
         <div className="w3-display-middle" style={{ whiteSpace: "nowrap" }}>

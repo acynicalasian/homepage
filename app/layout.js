@@ -37,9 +37,6 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        {/* I believe this should force the SDK to load synchronously instead of using the async option
-          given by Meta in their guides. */}
-        <script crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
         <NavBar />
         {children}
         <Footer />
