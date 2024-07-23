@@ -18,7 +18,9 @@ export default function FBSDKLoad() {
     });
   },[]);
   if (status == "connected") {
-    return <Genie/>;
+    // For now, load the FBLogin module to see if we can logout
+    return <FBLogin/>;
+    //return <Genie/>;
   } else if (status == "not_authorized" || 
              status == "unknown") {
     return <FBLogin/>;
