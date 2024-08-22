@@ -28,12 +28,11 @@ export default function FBSDKLoad() {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-  },[]);
+  },[status]);
 
   if (status == "connected") {
     // For now, load the FBLogin module to see if we can logout
-    return <FBLogin/>;
-    //return <Genie/>;
+    return <Genie/>;
   } else if (status == "not_authorized" || 
              status == "unknown") {
     return <FBLogin/>;
