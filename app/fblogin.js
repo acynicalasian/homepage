@@ -11,5 +11,6 @@ export default function FBLogin() {
     data-button-type="continue_with"
     data-layout=""
     data-auto-logout-link="true"
-    data-use-continue-as="true" />);
+    data-use-continue-as="true"
+    style={{ display: "table", margin: "0 auto" }} />);
 }

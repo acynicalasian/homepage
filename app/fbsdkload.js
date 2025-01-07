@@ -10,15 +10,18 @@ export default function FBSDKLoad() {
     // Load the FB SDK asynchronously
     window.fbAsyncInit = function () {
       FB.init({
+        // Because Meta whitelists originating domains, we should be
+        // safe to leave our appID here. Don't do this for other
+        // APIs though.
         appId: '828712989097356',
         cookie: true,
         xfbml: true,
         version: 'v20.0'
       });
 
-      FB.getLoginStatus(function(response) {
+      FB.getLoginStatus(function(response) {        
         setStatus(response.status);
-      });
+      }, true);
     };
 
     (function (d, s, id) {

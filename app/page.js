@@ -23,13 +23,22 @@ export default function Home() {
         </p>
         <p>
           Welcome to my website! My name's Arthur Kim and I graduated from UCLA in
-          March of 2024 with a B.A. in Linguistics and Computer Science. My academic
-          experience consists primarily of backend development with a particular
-          focus on NLP, and I'm looking to work as an entry level software
-          engineer/developer. I feel most comfortable programming in Python, C, and
-          Haskell, but I have academic experience in C++ and shell scripting. This
-          website/webapp serves not only as a portal to my Github and my LinkedIn but
-          also as a live project in and of itself.
+          March of 2024 with a B.A. in Linguistics and Computer Science and a
+          cumulative GPA of 3.007. My academic experience consists primarily of
+          programming in Python and Haskell with a focus on natural language
+          processing (NLP), and I have a background in C, C++, and shell scripting.
+          This website serves not only as a portal to my GitHub and LinkedIn but also
+          as a live project in and of itself, with an integrated webapp. Outside of
+          school, I have experience writing a scraper for Wiktionary built on Python
+          that uses the MediaWiki API and the Beautiful Soup HTML parsing library,
+          with some exposure to the Google Cloud Natural Language API. On the other
+          hand, this project has given me some familiarity with Blazor, C#, and .NET.
+        </p>
+        <p>
+          Ideally, this website should be fluid, elegant, and functional for both
+          desktop and mobile clients. If there are any issues, feel free to contact
+          me via GitHub by creating a new ticket <a href="https://github.com/acynicalasian/homepage/issues">here</a> or
+          by sending me a message on my LinkedIn.
         </p>
         <div className="w3-row">
           {/* Adding w3-hide-small here should hide this on small devices as well. */}
@@ -53,20 +62,19 @@ export default function Home() {
           {/* Hide this text on small devices */}
           <div className="w3-col m6 w3-hide-small w3-padding-large">
             <p>
-              My goal with this project is to demonstrate my willingness and ability
-              to learn new skills. To power this website/webapp, I decided to learn
-              React and Next.js. These two frameworks have taught me a lot about
-              approaching front-end design with a modular approach. I started off
-              with a free template for the webpage, but I've learned a lot about
-              HTML, CSS, and JavaScript from tweaking various elements of the
-              template.
+              My goal with this project is to demonstrate the experience I've
+              gained by self-learning HTML, CSS, JavaScript, React, and Next.js.
+              React and Next.js have taught me a lot about approaching front-end
+              design with a modular approach. That being said, I'm sure there's
+              plenty of hacky workarounds in my codebase, but I think that's a virtue
+              on my end. My modus operandi has always been to hack together functional,
+              yet elegant products by relying on my computer science expertise and
+              piecing together various pieces of code and various frameworks as needed.
             </p>
             <p>
-              As of now, I'm in the process of implementing Facebook Login via the
-              JavaScript SDK provided by Meta. I'd like to fetch a user's posts by
-              using Meta's SDK and use IBM Watson's sentiment analysis features to
-              make fun suggestions based on the user's recent posts; it'll be a
-              "genie" of sorts.
+              As of now, I'm styling and implementing the webapp. I intend to use
+              Cloudflare Worker AI to generate images. Hopefully I can hack together a
+              solution to generate spinoffs of your Facebook profile pictures.
             </p>
           </div>
         </div>
