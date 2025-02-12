@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 
+// Keep this file as JavaScript as well... I don't want to care about the implementation details of
+// the default login button!
+
 export default function FBLogin() {
   useEffect(() => {
     window.FB.XFBML.parse();

@@ -1,15 +1,17 @@
 'use client'
 
 import "./globals.css";
-import NavBar from "./navbar.js";
-import { React, useEffect } from "react";
+import NavBar from "./navbar";
+import React from 'react';
+import { useEffect } from 'react';
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
   useEffect(() => {
     // Change style of navbar on scroll
     window.onscroll = function () { myFunction() };
     function myFunction() {
       var navbar = document.getElementById("myNavbar");
+      if (navbar == null) throw new Error(); // This shouldn't happen. Avoiding static analysis errors.
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
       } else {

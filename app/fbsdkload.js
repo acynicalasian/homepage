@@ -1,7 +1,11 @@
 'use client'
 
+// I don't know if I can get the JSSDK to load properly with TypeScript, and I"m not even sure what
+// type FB would be. We'll be forced to use JavaScript here instead of TypeScript, but it is what
+// it is.
+
 import { useState, useEffect } from "react";
-import Genie from "./genie.js";
+import Genie from "./genie";
 import FBLogin from "./fblogin.js";
 
 export default function FBSDKLoad() {
@@ -33,11 +37,5 @@ export default function FBSDKLoad() {
     }(document, 'script', 'facebook-jssdk'));
   },[status]);
 
-  if (status == "connected") {
-    // For now, load the FBLogin module to see if we can logout
-    return <Genie/>;
-  } else if (status == "not_authorized" || 
-             status == "unknown") {
-    return <FBLogin/>;
-  } else return <p>fuck</p>;
+  return <Genie status={status}/>;
 }

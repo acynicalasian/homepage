@@ -1,14 +1,17 @@
 'use client'
 
-import { React } from "react";
+import React from 'react';
 
 function toggleNavBar() {
   var x = document.getElementById("navDemo");
+  if (x == null) return; // This should solve TS's warning about x possibly being null... hopefully
+                         // this shouldn't happen anyway.
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     // Toggle navbar style to be white if we press the toggle button
     if (document.body.scrollTop <= 100 || document.documentElement.scrollTop <= 100) {
       var navbar = document.getElementById("myNavbar");
+      if (navbar == null) return; // more avoiding "may be null" errors. Should be fine??
       navbar.className = "w3-bar w3-card w3-white";
     }
   } else {
@@ -17,6 +20,7 @@ function toggleNavBar() {
     // navbar menu was open
     if (document.body.scrollTop <= 100 || document.documentElement.scrollTop <= 100) {
       var navbar = document.getElementById("myNavbar");
+      if (navbar == null) return;
       navbar.className = "w3-bar";
     }
   }

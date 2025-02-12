@@ -138,7 +138,7 @@ export default function Home() {
                     className="w3-input w3-border"
                     type="text"
                     placeholder="Name"
-                    required=""
+                    required={false}
                     name="Name"
                   />
                 </div>
@@ -147,7 +147,7 @@ export default function Home() {
                     className="w3-input w3-border"
                     type="text"
                     placeholder="Email"
-                    required=""
+                    required={false}
                     name="Email"
                   />
                 </div>
@@ -156,7 +156,7 @@ export default function Home() {
                 className="w3-input w3-border"
                 type="text"
                 placeholder="Message"
-                required=""
+                required={false}
                 name="Message"
               />
               <button
