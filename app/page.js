@@ -22,7 +22,7 @@ export default function Home() {
           </em>
         </p>
         <p>
-          Welcome to my website! My name's Arthur Kim and I graduated from UCLA in
+          Welcome to my website! My name&apos;s Arthur Kim and I graduated from UCLA in
           March of 2024 with a B.A. in Linguistics and Computer Science and a
           cumulative GPA of 3.007. My academic experience consists primarily of
           programming in Python and Haskell with a focus on natural language
@@ -62,17 +62,17 @@ export default function Home() {
           {/* Hide this text on small devices */}
           <div className="w3-col m6 w3-hide-small w3-padding-large">
             <p>
-              My goal with this project is to demonstrate the experience I've
+              My goal with this project is to demonstrate the experience I&apos;ve
               gained by self-learning HTML, CSS, JavaScript, React, and Next.js.
               React and Next.js have taught me a lot about approaching front-end
-              design with a modular approach. That being said, I'm sure there's
-              plenty of hacky workarounds in my codebase, but I think that's a virtue
+              design with a modular approach. That being said, I&apos;m sure there's
+              plenty of hacky workarounds in my codebase, but I think that&apos;s a virtue
               on my end. My modus operandi has always been to hack together functional,
               yet elegant products by relying on my computer science expertise and
               piecing together various pieces of code and various frameworks as needed.
             </p>
             <p>
-              As of now, I'm styling and implementing the webapp. I intend to use
+              As of now, I&apos;m styling and implementing the webapp. I intend to use
               Cloudflare Worker AI to generate images. Hopefully I can hack together a
               solution to generate spinoffs of your Facebook profile pictures.
             </p>
@@ -102,7 +102,7 @@ export default function Home() {
       <div className="w3-content w3-container w3-padding-64 snap-child" id="links">
         <h3 className="w3-center">WHERE I WORK</h3>
         <p className="w3-center">
-          <em>I'd love your feedback!</em>
+          <em>I&apos;d love your feedback!</em>
         </p>
         <div className="w3-row w3-padding-32 w3-section">
           <div className="w3-col m4 w3-container">
