@@ -1,5 +1,5 @@
 'use client'
-import FBSDKLoad from "./fbsdkload.js";
+import FBSDKLoad from "./genie/fbsdkload";
 
 export default function Home() {
   return (
@@ -65,7 +65,7 @@ export default function Home() {
               My goal with this project is to demonstrate the experience I&apos;ve
               gained by self-learning HTML, CSS, JavaScript, React, and Next.js.
               React and Next.js have taught me a lot about approaching front-end
-              design with a modular approach. That being said, I&apos;m sure there's
+              design with a modular approach. That being said, I&apos;m sure there&apos;s
               plenty of hacky workarounds in my codebase, but I think that&apos;s a virtue
               on my end. My modus operandi has always been to hack together functional,
               yet elegant products by relying on my computer science expertise and

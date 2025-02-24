@@ -6,10 +6,9 @@
 
 import { useState, useEffect } from "react";
 import Genie from "./genie";
-import FBLogin from "./fblogin.js";
 
 export default function FBSDKLoad() {
-  const [status, setStatus] = useState("");
+  const [fbLoginStatus, setFBLoginStatus] = useState("");
   useEffect(() => {
     // Load the FB SDK asynchronously
     window.fbAsyncInit = function () {
@@ -24,7 +23,7 @@ export default function FBSDKLoad() {
       });
 
       FB.getLoginStatus(function(response) {        
-        setStatus(response.status);
+        setFBLoginStatus(response.status);
       }, true);
     };
 
@@ -35,7 +34,12 @@ export default function FBSDKLoad() {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-  },[status]);
+  },[fbLoginStatus]);
 
-  return <Genie status={status}/>;
+  return (
+    <Genie
+      fbLoginStatus={fbLoginStatus}
+      fbLoginStatusSetter={(s) => { setFBLoginStatus(s); }}
+    />
+  );
 }
